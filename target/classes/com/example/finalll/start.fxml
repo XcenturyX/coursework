@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vBox" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalll.StartController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ToolBar nodeOrientation="LEFT_TO_RIGHT" orientation="VERTICAL" prefHeight="40.0" prefWidth="200.0">
+              <items>
+                  <Label text="Яркость" />
+                  <Slider fx:id="Light" max="0.5" min="-0.5" onMouseClicked="#Light" />
+              </items>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ToolBar>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="420.0" fitWidth="520.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+      <ToolBar>
+        <items>
+            <Button fx:id="loudImg" mnemonicParsing="false" onAction="#LoudImige" text="Loud Image" />
+            <Button fx:id="ToolsB" mnemonicParsing="false" onAction="#SetToolsButtn" text="Editing" />
+        </items>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </ToolBar>
+   </children>
+</VBox>
